@@ -1,0 +1,26 @@
+import random
+
+acc=0
+mp=[]
+vmax=100
+vmin=1
+for i in range(100):
+    na=random.randint(vmin, vmax)
+    mp.append(na)
+
+
+read=10
+write=11
+
+load=20
+store=21
+
+add=30
+subtract=31
+divide=32
+multiply=33
+
+branch=40
+branchneg=41
+branchzero=42
+halt=43
