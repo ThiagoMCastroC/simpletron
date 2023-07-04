@@ -1,7 +1,7 @@
 import random
 
-acc=0
-mp=[]
+acc=0 #cria a variável acumulador
+mp=[] #cria ums lista vazia para a mp, depois a preenche de forma aleatória
 for i in range(100):
     c=random.randint(1, 100)
     mp.append(c)
@@ -23,7 +23,7 @@ branchneg=41
 branchzero=42
 halt=43
 
-operando=random.randint(1,100)
+operando=random.randint(1,100) #cria a variável operando, para possíveis branchs
 
 print(mp)
 while i!=43:
