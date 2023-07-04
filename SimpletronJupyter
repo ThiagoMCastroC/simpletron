@@ -1,13 +1,10 @@
-#Ainda estou fazendo o código, demorei para entender o conteúdo/instruções do trabalho :(...
 import random
 
 acc=0
 mp=[]
-vmax=100
-vmin=1
 for i in range(100):
-    na=random.randint(vmin, vmax)
-    mp.append(na)
+    c=random.randint(1, 100)
+    mp.append(c)
 
 
 read=10
@@ -25,3 +22,44 @@ branch=40
 branchneg=41
 branchzero=42
 halt=43
+
+operando=random.randint(1,100)
+
+print(mp)
+while i!=43:
+    instrução=int(input('Insira uma instrução ou encerre o programa:'))
+    end=int(input('Insira o endereço da célula da mp que será operacionada:'))
+    if instrução==10:
+        operando=int(input('Insira a palavra que será lida:'))
+        mp[end]=operando
+        print(operando)
+    elif instrução==11:
+        print(f'Palavra da posição indicada:{mp[end]}')
+    elif instrução==20:
+        acc=mp[end]
+    elif instrução==21:
+        mp[end]=acc
+    elif instrução==30:
+        acc=acc+mp[end]
+        print(f'Valor armazenado no acc:{acc}')
+    elif instrução==31:
+        acc=mp[end]-acc
+        print(f'Valor armazenado no acc:{acc}')
+    elif instrução==32:
+        acc=acc/mp[end]
+        print(f'Valor armazenado no acc:{acc}')
+    elif instrução==33:
+        acc=acc*mp[end]
+        print(f'Valor armazenado no acc:{acc}')
+    elif instrução==40:
+        operando=mp[end]
+    elif instrução==41:
+        if acc<0:
+            instrução=mp[end]
+    elif instrução==42:
+        if acc==0:
+            instrução=mp[end]
+    else:
+        print('Programa encerrado!')
+        break
+        
